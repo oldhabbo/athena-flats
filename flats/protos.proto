@@ -1,0 +1,47 @@
+syntax = "proto3";
+package flats;
+
+enum EntityType {
+  PLAYER = 0;
+  DOG = 1;
+  CAT = 2;
+  CROCODILE = 3;
+}
+
+service Dice {
+  rpc Interact(RollRequest) returns (RollResponse) {}
+}
+
+service WheelOfFortune {
+  rpc Interact(FortuneRequest) returns (FortuneResponse) {}
+}
+
+
+service StickyNote {
+  rpc Interact(NoteRequest) returns (NoteResponse) {}
+}
+
+service Moodlight {
+  rpc Interact(MoodlightRequest) returns (MoodlightResponse) {}
+}
+
+service Channel {
+  rpc Chat(ChatRequest) returns (ChatResponse) {}
+  rpc Shout(ShoutRequest) returns (ShoutResponse) {}
+  rpc Whisper(WhisperRequest) returns (WhisperResponse) {}
+  rpc IgnoreUser(IgnoreRequest) returns (IgnoreResponse) {}
+  rpc UnignoreUser(UnignoreRequest) returns (UnignoreResponse) {}
+}
+
+service Flat {
+  rpc Broadcast(BroadcastRequest) returns (BroadcastResponse) {}
+  rpc PlaceItem(PlaceRequest) returns (PlaceResponse) {}
+  rpc MoveItem(ItemMoveRequest) returns (ItemMoveResponse) {}
+  rpc Dance(DanceRequest) returns (DanceResponse) {}
+  rpc Wave(WaveRequest) returns (WaveResponse) {}
+  rpc WalkTo(CoordinateRequest) returns (WalkPathResponse) {}
+  rpc IgnoreUser(IgnoreRequest) returns (IgnoreResponse) {}
+  rpc UnignoreUser(UnignoreRequest) returns (UnignoreResponse) {}
+  rpc Disconnect(DisconnectRequest) returns (DisconnectResponse) {}
+  rpc GetHeightmap(
+}
